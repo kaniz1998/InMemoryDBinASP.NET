@@ -1,7 +1,12 @@
+using InMemoryDBinASP.NET.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+//Added In Memory Database
+builder.Services.AddDbContext<MyDbContext>();
 
 var app = builder.Build();
 
